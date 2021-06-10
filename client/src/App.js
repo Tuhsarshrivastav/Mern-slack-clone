@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./components/Layout/Footer";
 import TeamListContainer from "./components/Layout/TeamList/TeamListContainer";
 import LoginContainer from "./components/Login/LoginContainer";
+import RegisterContainer from "./components/Register/RegisterContainer";
 const App = () => {
   return (
     <Router>
@@ -13,6 +14,9 @@ const App = () => {
         </Route>
         <Route exact path="/login">
           <LoginContainer />
+        </Route>
+        <Route exact path="/register">
+          <RegisterContainer />
         </Route>
       </Switch>
       <Footer />
