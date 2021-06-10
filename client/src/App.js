@@ -1,5 +1,11 @@
+import NavbarContainer from "./components/Layout/Navbar/NavbarContainer";
+import { BrowserRouter as Router } from "react-router-dom";
 const App = () => {
-  return <div className="text-danger">hello</div>;
+  return (
+    <Router>
+      <NavbarContainer />
+    </Router>
+  );
 };
 
 export default App;
