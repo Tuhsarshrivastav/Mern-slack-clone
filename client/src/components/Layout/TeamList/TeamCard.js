@@ -1,6 +1,6 @@
 const TeamCard = ({ title, about, btn_text }) => {
   return (
-    <div className="card shadow p-3 mb-5 bg-body rounded">
+    <div className="card shadow animate_animated animate__rubberBand p-3 mb-5 bg-body rounded">
       <div className="card-body">
         <div className="row">
           <div className="col-md-4">

@@ -16,7 +16,7 @@ const TeamListView = () => {
             />
           </div>
           <div className="col-md-6 text-center">
-            <p className="my-5">
+            <p className="my-5 animate_animated animate__flash ">
               Join this team with project software developer
             </p>
           </div>
