@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="container-fluid my-5 bg-dark">
+    <div className="container-fluid  py-4 bg-dark" style={{ height: "101px" }}>
       <div className="container text-center text-white">
         <img
           src="assets/img/slack_logo.png"
