@@ -1,5 +1,5 @@
 import TextFieldInput from "../common/TextFieldInput";
-const RegisterView = () => {
+const RegisterView = (props) => {
   return (
     <div className="container-fluid">
       <div className="container my-5">
@@ -13,7 +13,7 @@ const RegisterView = () => {
                 type="text"
                 name="username"
                 id="username"
-                placeholder="sandeep_dev"
+                placeholder="username"
                 className="form-control"
                 lblText="Username"
                 infoText="Your username will shown in chat list."

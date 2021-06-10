@@ -10,7 +10,9 @@ export class LoginContainer extends Component {
     };
   }
   handleChange = (e) => {
-    e.preventDefault();
+    const name = e.target.name;
+    const value = e.target.value;
+    this.setState({ [name]: value });
   };
   submitChange = (e) => {
     e.preventDefault();

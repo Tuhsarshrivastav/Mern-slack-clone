@@ -12,7 +12,13 @@ export class RegisterContainer extends Component {
     };
   }
   handleChange = (e) => {
-    e.preventDefault();
+    const name = e.target.name;
+    const value = e.target.value;
+    if (name == "username") {
+      this.setState({ [name]: value.replace("  ", "_") });
+      return;
+    }
+    this.setState({ [name]: value });
   };
   submitChange = (e) => {
     e.preventDefault();
