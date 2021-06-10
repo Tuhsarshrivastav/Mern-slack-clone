@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const NavbarView = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <Link to="/" className="navbar-brand" >
+      <Link to="/" className="navbar-brand">
         <img
           src="assets/img/slack_logo.png"
           alt="logo"
@@ -26,8 +26,8 @@ const NavbarView = () => {
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav">
           <li className="nav-item active">
-            <Link className="nav-link" to="login">
-              Login <span className="sr-only">(current)</span>
+            <Link className="nav-link" to="/login">
+              Login
             </Link>
           </li>
           <li className="nav-item">

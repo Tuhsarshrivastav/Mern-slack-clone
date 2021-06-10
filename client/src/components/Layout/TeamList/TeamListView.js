@@ -2,10 +2,7 @@ import TeamCard from "./TeamCard";
 
 const TeamListView = () => {
   return (
-    <div
-      className="container-fluid py-5 bg-warning"
-      style={{ height: "518px" }}
-    >
+    <div className="container-fluid py-5 bg-warning">
       <div className="container">
         <div className="row">
           <div className="col-md-6 text-center">
