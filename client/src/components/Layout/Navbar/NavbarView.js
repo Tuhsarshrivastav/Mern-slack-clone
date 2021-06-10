@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const NavbarView = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{ height: "10vh" }}>
       <Link to="/" className="navbar-brand">
         <img
           src="assets/img/slack_logo.png"

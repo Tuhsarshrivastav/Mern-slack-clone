@@ -1,3 +1,4 @@
+import TextFieldInput from "../common/TextFieldInput";
 const RegisterView = () => {
   return (
     <div className="container-fluid">
@@ -8,7 +9,7 @@ const RegisterView = () => {
         >
           <div className="card-body">
             <form>
-              <input
+              <TextFieldInput
                 type="text"
                 name="username"
                 id="username"
@@ -17,7 +18,7 @@ const RegisterView = () => {
                 lblText="Username"
                 infoText="Your username will shown in chat list."
               />
-              <input
+              <TextFieldInput
                 type="email"
                 name="email"
                 id="email"
@@ -27,7 +28,7 @@ const RegisterView = () => {
                 infoText="We'll never share your email with anyone else."
               />
 
-              <input
+              <TextFieldInput
                 type="password"
                 name="password"
                 id="password"
@@ -35,7 +36,7 @@ const RegisterView = () => {
                 className="form-control"
                 lblText="Password"
               />
-              <input
+              <TextFieldInput
                 type="password"
                 name="password1"
                 id="password1"

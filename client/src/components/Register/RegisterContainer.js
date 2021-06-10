@@ -11,11 +11,21 @@ export class RegisterContainer extends Component {
       password1: "",
     };
   }
+  handleChange = (e) => {
+    e.preventDefault();
+  };
+  submitChange = (e) => {
+    e.preventDefault();
+  };
 
   render() {
     return (
       <div>
-        <RegisterView />
+        <RegisterView
+          {...this.state}
+          handleChange={this.handleChange}
+          submitChange={this.submitChange}
+        />
       </div>
     );
   }

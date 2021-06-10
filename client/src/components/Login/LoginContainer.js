@@ -9,10 +9,20 @@ export class LoginContainer extends Component {
       password: "",
     };
   }
+  handleChange = (e) => {
+    e.preventDefault();
+  };
+  submitChange = (e) => {
+    e.preventDefault();
+  };
   render() {
     return (
       <div>
-        <LoginView />
+        <LoginView
+          {...this.state}
+          handleChange={this.handleChange}
+          submitChange={this.submitChange}
+        />
       </div>
     );
   }
