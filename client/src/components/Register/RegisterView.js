@@ -17,11 +17,15 @@ const RegisterView = (props) => {
                 className="form-control"
                 lblText="Username"
                 infoText="Your username will shown in chat list."
+                value={props.username}
+                onChange={props.handleChange}
               />
               <TextFieldInput
                 type="email"
                 name="email"
                 id="email"
+                value={props.email}
+                onChange={props.handleChange}
                 placeholder="abc@abc.com"
                 className="form-control"
                 lblText="Email address"
@@ -31,6 +35,8 @@ const RegisterView = (props) => {
               <TextFieldInput
                 type="password"
                 name="password"
+                value={props.password}
+                onChange={props.handleChange}
                 id="password"
                 placeholder="**********"
                 className="form-control"
@@ -39,6 +45,8 @@ const RegisterView = (props) => {
               <TextFieldInput
                 type="password"
                 name="password1"
+                value={props.password1}
+                onChange={props.handleChange}
                 id="password1"
                 placeholder="**********"
                 className="form-control"
