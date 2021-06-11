@@ -1,10 +1,6 @@
 import {
   AUTH_CLEAR_ERROR,
-  AUTH_LOGIN,
-  AUTH_LOGOUT,
-  AUTH_REGISTER,
   AUTH_REQUEST,
-  AUTH_RESPONSE,
   AUTH_SET_ERROR,
   AUTH_SET_USER,
 } from "../action/types";
@@ -15,13 +11,9 @@ const initialState = {
   error: {},
   user: {},
 };
-export default authReducers = (state = initialState, action) => {
+
+export default function authReducer(state = initialState, action) {
   switch (action.type) {
-    case AUTH_REQUEST:
-      return {
-        ...state,
-        isLoading: true,
-      };
     case AUTH_REQUEST:
       return {
         ...state,
@@ -45,4 +37,4 @@ export default authReducers = (state = initialState, action) => {
     default:
       return state;
   }
-};
+}

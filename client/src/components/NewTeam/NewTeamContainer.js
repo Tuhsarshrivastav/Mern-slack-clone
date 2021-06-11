@@ -1,23 +1,18 @@
 import React, { Component } from "react";
-import RegisterView from "./RegisterView";
-export class RegisterContainer extends Component {
+import NewTeamView from "./NewTeamView";
+
+export class NewTeamContainer extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      username: "",
-      email: "",
-      password: "",
-      password1: "",
+      name: "",
+      desc: "",
     };
   }
   handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    if (name === "username") {
-      this.setState({ [name]: value.replace("  ", "_") });
-      return;
-    }
     this.setState({ [name]: value });
   };
   submitChange = (e) => {
@@ -27,7 +22,7 @@ export class RegisterContainer extends Component {
   render() {
     return (
       <div>
-        <RegisterView
+        <NewTeamView
           {...this.state}
           handleChange={this.handleChange}
           submitChange={this.submitChange}
@@ -37,4 +32,4 @@ export class RegisterContainer extends Component {
   }
 }
 
-export default RegisterContainer;
+export default NewTeamContainer;

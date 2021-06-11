@@ -6,6 +6,7 @@ import LoginContainer from "./components/Login/LoginContainer";
 import RegisterContainer from "./components/Register/RegisterContainer";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import NewTeamContainer from "./components/NewTeam/NewTeamContainer";
 const App = () => {
   return (
     <Provider store={store}>
@@ -14,6 +15,9 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <TeamListContainer />
+          </Route>
+          <Route exact path="/createTeam">
+            <NewTeamContainer />
           </Route>
           <Route exact path="/login">
             <LoginContainer />

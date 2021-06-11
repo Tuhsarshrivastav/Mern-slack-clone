@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const TeamCard = ({ title, about, btn_text }) => {
   return (
     <div className="card shadow animate_animated animate__rubberBand p-3 mb-5 bg-body rounded">
@@ -13,9 +14,7 @@ const TeamCard = ({ title, about, btn_text }) => {
           <div className="col-md-8">
             <h5 className="card-title">{title}</h5>
             <p className="card-text">{about}</p>
-            <a href="#" className="btn btn-danger">
-              {btn_text}
-            </a>
+            <Link className="btn btn-danger">{btn_text}</Link>
           </div>
         </div>
       </div>
