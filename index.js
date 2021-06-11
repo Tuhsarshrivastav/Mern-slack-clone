@@ -6,8 +6,13 @@ const cors = require("cors");
 
 const port = process.env.PORT;
 
+//Api Routes import
+const userRoute = require("./routes/User");
+
 //Cross origin Resource Sharing setup
 app.use(cors());
+//User Route
+app.use("/api/user/", userRoute);
 
 //default route
 //Method Get
