@@ -4,7 +4,11 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
-const port = process.env.PORT;
+//Imports
+const Database = require("./config/db");
+
+//Database
+Database();
 
 //Api Routes import
 const userRoute = require("./routes/User");
@@ -24,8 +28,8 @@ app.get("/", (req, res) => {
     message: "Default API Route",
   });
 });
-
+const port = process.env.PORT;
 //Start Web Server
 app.listen(port, () => {
-  console.log(`Server is running on ${port}`);
+  console.log(`Server is Connected on That Port ${port}`);
 });
