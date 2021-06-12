@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import TeamListView from './TeamListView'
+import MyTeamView from './MyTeamView'
 import axios from 'axios'
-import { apiBaseURL } from './../../../utils/constant'
-import TokenExpire from './../../../utils/TokenExpire'
+import { apiBaseURL } from './../../utils/constant'
+import TokenExpire from './../../utils/TokenExpire'
 
-class TeamListContainer extends Component {
+class MyTeamContainer extends Component {
 
   constructor(props){
     super(props)
@@ -14,41 +14,39 @@ class TeamListContainer extends Component {
     }
 
     // page title update
-    document.title = "Hack Slack - All Chat Teams"
+    document.title = "Hack Slack - Your Chat Team"
   }
 
   componentDidMount(){
-
     // start loader before api call
     document.body.classList.add("loading")
 
     axios.get(
-      `${apiBaseURL}/api/team/all`
+      `${apiBaseURL}/api/team/my`
     ).then(res => {
       this.setState({ teams: res.data.teams })
 
       // remove loader after api call
       document.body.classList.remove("loading")
+
     }).catch(err => {
+      // Handle token expire
+      if (err.response.data.error.token_error){
+        TokenExpire()
+      }
 
       // remove loader after api call
       document.body.classList.remove("loading")
-      
-      // Handle token expire
-      // if (err.response.data.error.token_error){
-      //   TokenExpire()
-      // }
     })
   }
 
-  
   render() {
     return (
-      <TeamListView 
+      <MyTeamView 
         {...this.state}
       />
     )
   }
 }
 
-export default TeamListContainer
+export default MyTeamContainer
